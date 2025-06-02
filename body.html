@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="design.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    
+    <aside class="sidebar">
+      <h2 class="logo"> Student</h2>
+      <nav class="sidebar-nav">
+        <button class="sidebar-link active" data-tab="dashboard"> Dashboard</button>
+        <button class="sidebar-link" data-tab="courses"> Courses</button>
+        <button class="sidebar-link" data-tab="results"> Results</button>
+        <button class="sidebar-link" data-tab="settings"> Settings</button>
+      </nav>
+    </aside>
+
+    
+    <div class="main-content">
+      <header class="header">
+        <h1>Student Dashboard</h1>
+        <div class="user-actions">
+          <button id="notificationBtn"></button>
+          <div class="profile-dropdown">
+            <button id="profileBtn"></button>
+            <div id="dropdownMenu" class="dropdown hidden">
+              <button>Profile</button>
+              <button>Logout</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="dashboard" class="tab-content">
+          <div class="cards">
+            <div class="card">
+                <h2>GPA</h2>
+                <p>8.76</p>
+            </div>
+            <div class="card">
+                <h2>Credits Completed</h2>
+                <p>92</p>
+            </div>
+            <div class="card">
+                <h2>Attendance</h2>
+                <p>94%</p>
+            </div>
+          </div>
+
+          <div class="chart-section">
+            <canvas id="gradeChart"></canvas>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </section>
+        <section id="features" class="py-4 bg-light">
+            <div class="container">
+                <h2>Student Result</h2>
+                <img src="result.jpg" alt="Result">
+                </div>
+        </section>
+        
+        <section id="courses" class="tab-content hidden">
+          <div class="card">
+            <h2>Enrolled Courses</h2>
+            <ul>
+              <li>Data Structures & Algorithms</li>
+              <li>Database Management Systems</li>
+              <li>Computer Networks</li>
+            </ul>
+          </div>
+        </section>
+
+       
+        <section id="results" class="tab-content hidden">
+          <div class="card">
+            <h2>Recent Results</h2>
+            <p>Semester 5: 8.9 GPA</p>
+            <p>Semester 4: 8.7 GPA</p>
+          </div>
+        </section>
+
+      
+        <section id="settings" class="tab-content hidden">
+          <div class="card">
+            <h2>Update Profile</h2>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email Address" />
+            <button>Save Changes</button>
+          </div>
+        </section>
+        <section id="Details" class="tab-content hidden">
+            <div class="card">
+              <h2>Name of Student</h2>
+              <ul>
+                <li>Abhishek Sharma</li>
+                <li>Debatta Dutta</li>
+                <li>Sihal Sharma</li>
+              </ul>
+            </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
